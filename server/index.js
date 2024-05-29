@@ -25,7 +25,16 @@ mongoose.connect(uri)
   });
 
 // 4) Global error handler
+app.use((err, req, res, next) => {
 
+    err.statuCode = err.statuCode || 500;
+    err.status = err.status || 'error';
+
+    res.status(err.statuCode).json({
+        status : err.status,
+        message : err.message,
+    });
+});
 
 // 5) Server
 const PORT = 3000;
