@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const authRouter = require('./routes/authRoute'); // Import your auth routes
 
 // Create an Express application
 const app = express();
@@ -10,9 +11,7 @@ app.use(cors);
 app.use(express.json());
 
 //2)Route
-app.get('/', (req, res) => {
-    res.send('Welcome to the API');
-  });
+app.use('/api/auth', authRouter);
 
 //3) Moongo db connection
 const uri = "mongodb+srv://hpham097:Ps8i1WvMaZg9VZpU@cluster0.budpssk.mongodb.net/"
