@@ -45,3 +45,52 @@ button{
 button:hover{
   background-color: blue;
 }
+
+/* App.js */
+.App {
+  text-align: center;
+  background-color: rgb(179, 169, 169);
+}
+
+.App-header {
+  background-color: whitesmoke;
+  padding: 20px;
+  color: black;  /* Changed to black since the background is light */
+  z-index: 999;
+  height: 40px;  /* Set a specific height */
+  display: flex;
+  align-items: center;  /* Center the content vertically */
+  justify-content: center;  /* Center the content horizontally */
+}
+
+.App-main {
+  padding: 20px;
+  z-index: 1;
+  background-color: white;
+}
+.App-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start; /* or any other alignment you prefer */
+}
+.App-footer {
+  background-color: #282c34;
+  padding: 10px;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.App-logo {
+  height: 60px; /* Set the initial height */
+  width: 60px; /* Set the initial width to match the height */
+  cursor: pointer;
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image covers the entire area without distortion */
+  transition: transform 0.2s; /* Adds a smooth transition effect */
+}
+
+.App-logo:hover {
+  transform: scale(1.9); /* Scales the image up on hover */
+}
