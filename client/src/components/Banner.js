@@ -3,9 +3,10 @@ import '../App.css';
 
 const Banner = () => {
     return (
-      <div >
-          nothing here
+      <div className='App-banner'>
+          Banner
       </div>
     );
 };
+
 export default Banner;
