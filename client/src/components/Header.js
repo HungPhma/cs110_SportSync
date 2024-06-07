@@ -1,18 +1,27 @@
-import React from 'react';
-import logo from '../Photo/project2.png'; // Make sure to replace with the actual path to your logo
-import profilePic from '../Photo/user-default.png'; // Make sure to replace with the actual path to your profile picture
-import notificationIcon from '../Photo/notification.svg'; // Make sure to replace with the actual path to your notification icon
+import React, { useState } from 'react';
+import logo from '../Photo/project2.png'; // Ensure the path to your logo is correct
+import profilePic from '../Photo/user-default.png'; // Ensure the path to your profile picture is correct
+import notificationIcon from '../Photo/notification.svg'; // Ensure the path to your notification icon is correct
+import searchIcon from '../Photo/search.png'; // Ensure the path to your search icon is correct
 import '../App.css';
 
 const Header = () => {
+  const [isSearchVisible, setIsSearchVisible] = useState(false);
+
+  const handleSearchClick = () => {
+    setIsSearchVisible(true);
+  };
+
   return (
     <div className="App-header">
       <div className="left-section">
-        <button className="home-button">Home</button>
-        <input type="text" placeholder="Search..." className="search-bar" />
+        {isSearchVisible ? (
+          <input type="text" placeholder="Search..." className="search-bar" />
+        ) : (<img src={searchIcon} alt="Search" className="search-icon" onClick={handleSearchClick} />)
+        }
       </div>
       <div className="center-section">
-        <img src={logo} alt="Logo" className="App-logo" />
+          <img src={logo} alt="Logo" className="App-logo" />
       </div>
       <div className="right-section">
         <img src={notificationIcon} alt="Notifications" className="notification-icon" />
