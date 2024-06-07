@@ -14,7 +14,7 @@ function App() {
       <div className="App-body">
         <Banner />
         <MainContent />
-        {/* <FollowEvent /> */}
+        <FollowEvent />
       </div>
       <Footer />
     </div>
