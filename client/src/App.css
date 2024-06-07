@@ -1,3 +1,19 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 .sign-up-container{
   display: flex;
   justify-content: center;
@@ -48,10 +64,14 @@ button:hover{
 
 /* App.js */
 .App {
+  /* display: flex; */
+  /* flex-direction: column; */
+  flex: 1;
+  width: auto;
+  height: 424px;
   text-align: center;
   background-color: rgb(179, 169, 169);
 }
-
 
 /* Header.js */
 .App-header {
@@ -170,8 +190,7 @@ button:hover{
   background-color: #282c34;
   padding: 10px;
   color: white;
-  position: fixed;
-  bottom: 0;
+  text-align: center;
   width: 100%;
 }
 .App-logo {
@@ -189,14 +208,29 @@ button:hover{
 
 
 /* Banner.js */
-
 .App-banner {
-  height: 200px;
+  height: auto;
   width: 250px;
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 20px;
   border-radius: 10px;
-  z-index: 1;
+  z-index: 999;
   background-color: white; 
+}
+
+.icon{
+  height: 30px; /* Set the initial height */
+  width: 30px; /* Set the initial width to match the height */
+  /* cursor: pointer; */
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image covers the entire area without distortion */
+  /* transition: transform 0.2s; */
+}
+.section-title {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
