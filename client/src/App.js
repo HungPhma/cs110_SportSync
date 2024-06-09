@@ -16,7 +16,7 @@ function App() {
         <MainContent />
         <FollowEvent />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
