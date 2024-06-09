@@ -1,37 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Followevent = () => {
+  const [showUpcomingEvents, setShowUpcomingEvents] = useState(false);
+  const [showHappeningNow, setShowHappeningNow] = useState(false);
+
+  const toggleHappeningNow = () => {
+    setShowHappeningNow(!showHappeningNow);
+  }
+
+  const toggleUpcomingEvents = () => {
+    setShowUpcomingEvents(!showUpcomingEvents);
+
+  }
+
   return (
     <div className="App-banner right">
-        <div>
-          Happening Now
+        <div className="following-container">
+          <button onClick={toggleHappeningNow} >Happening now</button>
         </div>
-        <br></br>
-        <p>Event A</p>
-        <p>Event B</p>
-        <p>Event C</p>
-        <p>Event D</p>
-        <br></br>
+        {showHappeningNow && (
+          <div>
+            <br></br>
+            <p>Event A</p>
+            <p>Event B</p>
+            <p>Event C</p>
+            <p>Event D</p>
+            <br></br>
+          </div>
+        )}
+        
 
-        <div>
-          <strong>My </strong>Upcoming Events
+        <div className="following-container">
+          <button onClick={toggleUpcomingEvents} >My Upcoming Events</button>
         </div>
-        <br></br>
-        <p>Event A</p>
-        <p>Event B</p>
-        <p>Event C</p>
-        <p>Event D</p>
-        <br></br>
-
-        <div>
-          Past Events
-        </div>
-        <br></br>
-        <p>Event A</p>
-        <p>Event B</p>
-        <p>Event C</p>
-        <p>Event D</p>
-
+        {showUpcomingEvents && (
+          <div>
+            <br></br>
+            <p>Event A</p>
+            <p>Event B</p>
+            <p>Event C</p>
+            <p>Event D</p>
+            <br></br>
+          </div>
+        )}
     </div>
   );
 };
