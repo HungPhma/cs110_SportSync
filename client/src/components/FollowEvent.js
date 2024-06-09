@@ -2,7 +2,7 @@ import React from 'react';
 
 const Followevent = () => {
   return (
-    <div className="App-banner">
+    <div className="App-banner right">
         <div>
           Happening Now
         </div>

@@ -9,6 +9,10 @@ html, body {
   font-family: Arial, sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 #root {
   display: flex;
   flex-direction: column;
@@ -81,9 +85,15 @@ button:hover{
   padding: 10px 20px;
   background-color: white;
   color: black;
+
+  width: 100%;
+
+  z-index: 2;
+  position: fixed;
 }
 .left-section,
 .center-section,
+
 .right-section {
   display: flex;
   align-items: center;
@@ -100,6 +110,7 @@ button:hover{
 }
 
 .right-section {
+  margin-right: 30px;
   flex: 1;
   justify-content: flex-end;
   display: flex;
@@ -161,7 +172,7 @@ button:hover{
   cursor: pointer;
   border-radius: 50%;
   object-fit: cover;
-  transition: tranform 0.2s;
+  transition: 0.2s;
 }
 
 .profile-pic:hover{
@@ -245,6 +256,7 @@ button:hover{
 }
 
 .btn{
+  opacity: 50%;
   cursor: pointer;
   width: 25px;
   padding: 5px;
@@ -254,7 +266,7 @@ button:hover{
 }
 
 .btn:hover{
-  background-color: rgba(0, 174, 255, 0.423);
+  background-color: rgba(0, 174, 255, 0.816);
 
 }
 .btn.heart{
@@ -271,7 +283,9 @@ button:hover{
 .App-main {
   /* height: 200px; */
   width: 800px;
-  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 85px;
   margin-bottom: 5px;
   padding: 20px 0px 0px 0px;
   border-radius: 10px;
@@ -307,28 +321,59 @@ button:hover{
 
 /* Banner.js */
 .App-banner {
+  /* position: fixed; */
   height: auto;
   width: 250px;
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 20px;
+  top: 80px;
   border-radius: 10px;
-  z-index: 999;
+  z-index: 1;
   background-color: white; 
 }
 
+.App-banner.left{
+  position: fixed;
+}
+.App-banner.right{
+  position: fixed;
+  right: 0px;
+}
+
 .icon{
-  height: 30px; /* Set the initial height */
-  width: 30px; /* Set the initial width to match the height */
-  /* cursor: pointer; */
-  border-radius: 50%; /* Makes the image circular */
-  object-fit: cover; /* Ensures the image covers the entire area without distortion */
-  /* transition: transform 0.2s; */
+  height: 30px; 
+  width: 30px; 
+  border-radius: 50%;
+  object-fit: cover;
 }
 .section-title {
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   font-size: 1.5rem;
   margin-bottom: 20px;
+}
+
+.expand-button {
+  width: 50px;
+  background: whitesmoke;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: auto;
+  align-items: center;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.expand-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+.expand-button:hover {
+  background: rgb(0, 89, 255);
 }
