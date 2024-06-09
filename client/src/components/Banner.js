@@ -24,7 +24,7 @@ const Banner = () => {
   };
 
   return (
-    <div className="App-banner">
+    <div className="App-banner left">
       <div className="banner-section">
         <div className="section-title">
           <img src={planIcon} alt="Plan Event Icon" className="icon" />
