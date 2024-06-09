@@ -9,10 +9,15 @@ import { useState } from 'react';
 const Post = (props) => {
 
   const [title, setTitle] = useState("Sample Event");
+  const [rsvp, setRsvp] = useState(false);
+  
 
   return (  
     <div className="post">
-      <h4>{ props.title } <span className="post-date">June 6</span></h4>
+      <div className="post-top">
+        <h4>{ props.title } <span className="post-date">June 6</span></h4>
+        <p className="post-sport"> { props.sport } </p>
+      </div>
       <p className="post-img"> Image Here</p>
       <div className="post-bottom">
         <p className="btn-join">RSVP</p>
