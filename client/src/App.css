@@ -1,3 +1,19 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 .sign-up-container{
   display: flex;
   justify-content: center;
@@ -44,4 +60,275 @@ button{
 
 button:hover{
   background-color: blue;
+}
+
+/* App.js */
+.App {
+  /* display: flex; */
+  /* flex-direction: column; */
+  flex: 1;
+  width: auto;
+  /* height: 424px; */
+  text-align: center;
+  background-color: rgb(179, 169, 169);
+}
+
+/* Header.js */
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+}
+.left-section,
+.center-section,
+.right-section {
+  display: flex;
+  align-items: center;
+}
+
+.left-section {
+  flex: 1;
+}
+
+.center-section {
+  flex: 1;
+  justify-content: center;
+  display: flex;
+}
+
+.right-section {
+  flex: 1;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.search-icon {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.search-icon:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -1px) rotate(-1deg); }
+  20% { transform: translate(-2px, 1px) rotate(1deg); }
+  30% { transform: translate(2px, 1px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 1px) rotate(-1deg); }
+  60% { transform: translate(-2px, -1px) rotate(0deg); }
+  70% { transform: translate(2px, -1px) rotate(-1deg); }
+  80% { transform: translate(1px, 1px) rotate(1deg); }
+  90% { transform: translate(-1px, -1px) rotate(0deg); }
+  100% { transform: translate(1px, 1px) rotate(-1deg); }
+}
+.search-bar {
+  width: 50%;
+  max-width: 300px;
+  padding: 8px;
+  border-radius: 20px;
+  border: 2px solid #ccc;
+  outline: none;
+}
+
+.search-bar::placeholder {
+  color: #999;
+}
+
+.notification-icon {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+  cursor: pointer;
+  object-fit: cover; /* Ensures the image covers the entire area without distortion */
+  transition: transform 0.2s; /* Adds a smooth transition effect */
+}
+
+.notification-icon:hover {
+  transform: scale(1.5); /* Scales the image up on hover */
+}
+
+.profile-pic {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: tranform 0.2s;
+}
+
+.profile-pic:hover{
+  transform: scale(1.3);
+}
+
+
+/* Post.js */
+
+.post{
+  user-select: none;
+
+  padding-top: 10px;
+  transition: 0.2s;
+  border-bottom: #aeaeae solid 1px;
+  /* border-top: #aeaeae solid 1px; */
+}
+
+.post:hover{
+  background-color: #f8f7f7;
+}
+
+.post h4 {
+  font-size: 18px;
+  padding-left: 10px;
+  text-align: left;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.post-date{
+  font-size: 14px;
+  font-style: italic;
+  color: #999;
+}
+
+.post-img{
+  align-items: center;
+  text-align: center;
+  height: 200px;
+  background-color: #2f2c811b;
+
+  font-size: 24px;
+  font-weight: bold;
+}
+/* Post buttons */
+.post-bottom{
+  justify-self: center;
+  display: flex;
+  flex: row;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 75%;
+
+  align-items: center;
+}
+
+.post-bottom-right{
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.btn-join{
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.25s;
+
+  align-items: center;
+  background-color: rgb(245, 245, 245);
+  padding: 5px 15px 5px 15px;
+  border-radius: 10px;
+}
+
+.btn-join:hover{
+  background-color: rgb(0, 166, 6);
+}
+
+.btn{
+  cursor: pointer;
+  width: 25px;
+  padding: 5px;
+  
+  border-radius: 25px;
+  transition: 0.25s;
+}
+
+.btn:hover{
+  background-color: rgba(0, 174, 255, 0.423);
+
+}
+.btn.heart{
+  /* padding-top: 7px;
+  padding-bottom: 3px; */
+
+}
+
+.btn.heart:hover{
+  background-color: rgba(255, 0, 72, 0.518);
+}
+
+/* main-content.js */
+.App-main {
+  /* height: 200px; */
+  width: 800px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 20px 0px 0px 0px;
+  border-radius: 10px;
+  z-index: 1;
+  background-color: white;
+}
+.App-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start; /* or any other alignment you prefer */
+}
+.App-footer {
+  background-color: #282c34;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+.App-logo {
+  height: 60px; /* Set the initial height */
+  width: 60px; /* Set the initial width to match the height */
+  cursor: pointer;
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image covers the entire area without distortion */
+  transition: transform 0.2s; /* Adds a smooth transition effect */
+}
+
+.App-logo:hover {
+  transform: scale(1.9); /* Scales the image up on hover */
+}
+
+
+/* Banner.js */
+.App-banner {
+  height: auto;
+  width: 250px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 999;
+  background-color: white; 
+}
+
+.icon{
+  height: 30px; /* Set the initial height */
+  width: 30px; /* Set the initial width to match the height */
+  /* cursor: pointer; */
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image covers the entire area without distortion */
+  /* transition: transform 0.2s; */
+}
+.section-title {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
