@@ -68,7 +68,7 @@ button:hover{
   /* flex-direction: column; */
   flex: 1;
   width: auto;
-  height: 424px;
+  /* height: 424px; */
   text-align: center;
   background-color: rgb(179, 169, 169);
 }
@@ -169,13 +169,111 @@ button:hover{
 }
 
 
+/* Post.js */
+
+.post{
+  user-select: none;
+
+  padding-top: 10px;
+  transition: 0.2s;
+  border-bottom: #aeaeae solid 1px;
+  /* border-top: #aeaeae solid 1px; */
+}
+
+.post:hover{
+  background-color: #f8f7f7;
+}
+
+.post h4 {
+  font-size: 18px;
+  padding-left: 10px;
+  text-align: left;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.post-date{
+  font-size: 14px;
+  font-style: italic;
+  color: #999;
+}
+
+.post-img{
+  align-items: center;
+  text-align: center;
+  height: 200px;
+  background-color: #2f2c811b;
+
+  font-size: 24px;
+  font-weight: bold;
+}
+/* Post buttons */
+.post-bottom{
+  justify-self: center;
+  display: flex;
+  flex: row;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 75%;
+
+  align-items: center;
+}
+
+.post-bottom-right{
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.btn-join{
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.25s;
+
+  align-items: center;
+  background-color: rgb(245, 245, 245);
+  padding: 5px 15px 5px 15px;
+  border-radius: 10px;
+}
+
+.btn-join:hover{
+  background-color: rgb(0, 166, 6);
+}
+
+.btn{
+  cursor: pointer;
+  width: 25px;
+  padding: 5px;
+  
+  border-radius: 25px;
+  transition: 0.25s;
+}
+
+.btn:hover{
+  background-color: rgba(0, 174, 255, 0.423);
+
+}
+.btn.heart{
+  /* padding-top: 7px;
+  padding-bottom: 3px; */
+
+}
+
+.btn.heart:hover{
+  background-color: rgba(255, 0, 72, 0.518);
+}
+
 /* main-content.js */
 .App-main {
-  height: 200px;
+  /* height: 200px; */
   width: 800px;
   margin-top: 5px;
   margin-bottom: 5px;
-  padding: 20px;
+  padding: 20px 0px 0px 0px;
   border-radius: 10px;
   z-index: 1;
   background-color: white;
